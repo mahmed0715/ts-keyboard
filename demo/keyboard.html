@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO supply a title</title>
+    <!--<meta charset="UTF-8">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    
+    <script src="../ts-keyboard.js"></script>
+  </head>
+  <body>
+    <div>Keyboard prototype: very simple, we have made a plugin which can be called for any div, $('#keyboard1').tsKeyboard(ConfiguredOBJ) and we can have more than one all are separated but data are stored in a multidimentional obj <br>Check to see if this can create keyboard on different definition, the first one is default for now</div>
+
+    <br>
+    var k = $('#keyboard1').tsKeyboard();
+    <br>
+    we have k.id as the id of the keybaord
+    <br>
+    <button id="show1">Show keyboard 1</button>
+    <button id="hide1">Hide keyboard 1</button>
+    <div id="keyboard1">
+    </div>
+    <div>..................................................</div>
+    <button id="show2">Show keyboard 2</button>
+    <button id="hide2">Hide keyboard 2</button>
+    <div id="keyboard2">
+      check this has different keys
+    </div>
+    
+    
+    <script>
+      var customObj = {
+  Configuration: {},
+  Data: [
+    [
+      {
+        ID: 1,
+        IPAnumber: null,
+        Display: {
+          Entity: "&#81;",
+          Unicode: "U+0051",
+          Image: {
+            VECTOR: "",
+            RESOLUTION1: "",
+            RESOLUTION2: "",
+            RESOLUTION3: ""
+
+          }
+        }
+      },
+      {
+        ID: 2,
+        IPAnumber: null,
+        Display: {
+          Entity: "&#87;",
+          Unicode: "U+0057",
+          Image: {
+            VECTOR: "",
+            RESOLUTION1: "",
+            RESOLUTION2: "",
+            RESOLUTION3: ""
+
+          }
+        }
+      },
+      {
+        ID: 3,
+        IPAnumber: null,
+        Display: {
+          Entity: "&#69;",
+          Unicode: "U+0045",
+          Image: {
+            VECTOR: "",
+            RESOLUTION1: "",
+            RESOLUTION2: "",
+            RESOLUTION3: ""
+
+          }
+        }
+      },
+      {
+        ID: 4,
+        IPAnumber: null,
+        Display: {
+          Entity: "&#82;",
+          Unicode: "U+0052",
+          Image: {
+            VECTOR: "",
+            RESOLUTION1: "",
+            RESOLUTION2: "",
+            RESOLUTION3: ""
+
+          }
+        }
+      }
+    ],
+    [
+      {
+        ID: 5,
+        IPAnumber: null,
+        Display: {
+          Entity: "&#65;",
+          Unicode: "U+0041",
+          Image: {
+            VECTOR: "",
+            RESOLUTION1: "",
+            RESOLUTION2: "",
+            RESOLUTION3: ""
+
+          }
+        }
+      },
+      {
+        ID: 6,
+        IPAnumber: null,
+        Display: {
+          Entity: "&#83;",
+          Unicode: "U+0053",
+          Image: {
+            VECTOR: "",
+            RESOLUTION1: "",
+            RESOLUTION2: "",
+            RESOLUTION3: ""
+
+          }
+        }
+      },
+      {
+        ID: 7,
+        IPAnumber: null,
+        Display: {
+          Entity: "&#68;",
+          Unicode: "U+0044",
+          Image: {
+            VECTOR: "",
+            RESOLUTION1: "",
+            RESOLUTION2: "",
+            RESOLUTION3: ""
+
+          }
+        }
+      },
+      {
+        ID: 8,
+        IPAnumber: null,
+        Display: {
+          Entity: "&#70;",
+          Unicode: "U+0046",
+          Image: {
+            VECTOR: "",
+            RESOLUTION1: "",
+            RESOLUTION2: "",
+            RESOLUTION3: ""
+
+          }
+        }
+      }
+    ],
+    [
+      {
+        ID: 9,
+        IPAnumber: null,
+        Display: {
+          Entity: "&#90;",
+          Unicode: "U+005A",
+          Image: {
+            VECTOR: "",
+            RESOLUTION1: "",
+            RESOLUTION2: "",
+            RESOLUTION3: ""
+
+          }
+        }
+      },
+      {
+        ID: 10,
+        IPAnumber: null,
+        Display: {
+          Entity: "&#88;",
+          Unicode: "U+0058",
+          Image: {
+            VECTOR: "",
+            RESOLUTION1: "",
+            RESOLUTION2: "",
+            RESOLUTION3: ""
+
+          }
+        }
+      },
+      {
+        ID: 11,
+        IPAnumber: null,
+        Display: {
+          Entity: "&#67;",
+          Unicode: "U+0043",
+          Image: {
+            VECTOR: "",
+            RESOLUTION1: "",
+            RESOLUTION2: "",
+            RESOLUTION3: ""
+
+          }
+        }
+      }
+
+    ]
+  ]
+};
+      $(document).ready(function () {
+
+
+
+        var kk = $('#keyboard1').tsKeyboard();
+
+        //kk.id is the id of the keybaord
+        $(document).on('click', '#show1', function () {
+//    kk = $('#keyboard1').tsKeyboard();
+          kk.show()
+        })
+        $(document).on('click', '#hide1', function () {
+          kk.hide();
+          console.log(kk.getQ());
+        })
+        var kk2 = $('#keyboard2').tsKeyboard(customObj);
+        $(document).on('click', '#show2', function () {
+          kk2.show()
+        })
+        $(document).on('click', '#hide2', function () {
+          console.log(kk, kk2);
+          kk2.hide()
+        })
+      });
+    </script>
+  </body>
+</html>
