@@ -1,0 +1,29 @@
+{
+  "name": "ts-keyboard",
+  "title": "Ts Keyboard",
+  "description": "A very simple jquery keybaord for your site",
+  "keywords": [
+    "jquery-plugins",
+    "ts-keyboard",
+    "keyboard"
+  ],
+  "version": "0.0.1",
+  "author": {
+    "name": "Mustak Ahmed",
+    "url": "https://github.com/mahmed0715"
+  },
+  
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "bugs": "https://github.com/mahmed0715/ts-leyboard/issues",
+  "homepage": "https://github.com/mahmed0715/ts-leyboard",
+  "docs": "https://github.com/mahmed0715/ts-leyboard#readme",
+  "download": "https://github.com/mahmed0715/ts-leyboard/archive/master.zip",
+  "dependencies": {
+    "jquery": ">=1.4"
+  }
+}
